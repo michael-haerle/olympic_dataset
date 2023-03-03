@@ -32,3 +32,18 @@ from sklearn.model_selection import cross_val_score
 # turn off pink boxes
 import warnings
 warnings.filterwarnings("ignore")
+
+def correlation_heatmap(train):
+    train_corr = train.corr().stack().reset_index(name="correlation")
+    g = sns.relplot(
+        data=train_corr,
+        x="level_0", y="level_1", hue="correlation", size="correlation",
+        palette="vlag", hue_norm=(-1, 1), edgecolor=".7",
+        height=8, sizes=(100, 250), size_norm=(-.2, .8))
+    g.set(xlabel="", ylabel="", title='Olympics Correlation Scatterplot heatmap', aspect="equal")
+    g.despine(left=True, bottom=True)
+    g.ax.margins(.02)
+    for label in g.ax.get_xticklabels():
+        label.set_rotation(45)
+    for artist in g.legend.legendHandles:
+        artist.set_edgecolor(".7")
