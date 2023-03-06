@@ -1,4 +1,4 @@
-# <a name="top"></a>Medals at the Olympics
+# <a name="top"></a>Medals at the Olympics (PLACEHOLDER README)
 ![]()
 
 by: Michael Haerle
@@ -24,7 +24,7 @@ ___
 
 
 ## <a name="project_description"></a>Project Description:
-Using the data science pipeline to practice with classification. In this repository you will find everything you need to replicate this project. This project uses the Telco dataset to find key drivers of churn. 
+
 
 [[Back to top](#top)]
 
