@@ -58,8 +58,8 @@ def wrangle_df():
     labels = ['Under_10','10s','20s','30s','40s','50s','60s','70s','80s']
     df['AgeBins'] = pd.cut(df['Age'], bins=bins, labels=labels, right=False)
     # train/validate/test split
-    train_validate, test = train_test_split(df, test_size=.2, random_state=123)
-    train, validate = train_test_split(train_validate, test_size=.3, random_state=123)
+    train_validate, test = train_test_split(df, test_size=.2, random_state=123, stratify=df.medalist)
+    train, validate = train_test_split(train_validate, test_size=.3, random_state=123, stratify=df.medalist)
     imputer = SimpleImputer(strategy='mean')
     imputer = imputer.fit(train[['Age']])
     train[['Age']] = imputer.transform(train[['Age']])
