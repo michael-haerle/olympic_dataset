@@ -47,18 +47,14 @@ ___
 
 
 ### Project goals: 
-- My goal is to find and use the key drivers of churn to predict which customer are at risk of churn. I will also recomend potential ways to reduce the monthly rate of churn.
+- 
 
 
 ### Target variable:
-- The target variable for this project is Churn.
+- 
 
 ### Initial questions:
-- Where are the correlations in the data?
-- Is there a relationship between Churn and Contract Type?
-- Is there a relationship between churn and phone service?
-- If not is there a relationship with females who churn with phone service?
-- Is there a relationship between people who are above the averge monthly charge and below the average tenure and churn?
+- 
 
 ### Need to haves (Deliverables):
 - A final report notebook
@@ -67,8 +63,7 @@ ___
 
 
 ### Nice to haves (With more time):
- - If I had more time with the project I would like to explore more combinations of features on my models and I would also implement more feature engineering.
- - I would also like to explore more why females that don't have phone service are less likely to churn.
+ - 
 
 
 ### Steps to Reproduce:
@@ -81,11 +76,7 @@ ___
 ## <a name="findings"></a>Key Findings:
 [[Back to top](#top)]
 
-- There are positive correlations with churn and monthly charges, papperless billing, fiber optic, phone service, senior citizen, and those who are above the average monthly charges and below the average tenure.
-- There are negative correlations with churn and tenure, total charges, no internet service, and a two year contract.
-- There is a relationship between churn and contract type.
-- There was not a relationship between both genders who churn and phone service, however there was a relationship between females who churn and phone service.
-- There was a relationship between churn and people who are above the average monthly charge and below the average tenure.
+- 
 
 
 ***
