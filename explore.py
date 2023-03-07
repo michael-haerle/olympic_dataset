@@ -47,3 +47,9 @@ def correlation_heatmap(train):
         label.set_rotation(45)
     for artist in g.legend.legendHandles:
         artist.set_edgecolor(".7")
+
+def barplot(train):
+    groups = train.groupby('Team').sum()
+    groups = groups[groups.medalist > 500].reset_index()
+    plt.figure(figsize=(10, 10))
+    sns.barplot(x='Team', y='medalist', data=groups, order=groups.sort_values('medalist').Team)
