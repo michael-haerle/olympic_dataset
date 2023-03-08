@@ -53,3 +53,5 @@ def barplot(train):
     groups = groups[groups.medalist > 500].reset_index()
     plt.figure(figsize=(10, 10))
     sns.barplot(x='Team', y='medalist', data=groups, order=groups.sort_values('medalist').Team)
+    plt.ylabel('Number of Medals')
+    plt.title('Top 7 Teams')
