@@ -75,8 +75,8 @@ def barplot_medalist_male_stat(train):
     alpha = 0.05
 
     # Setting the null and alternative hypothesis
-    null_hyp = 'Medalists and being Male are independent'
-    alt_hyp = 'There is a relationship between Medalists and being Male'
+    null_hyp = 'Medalists and being male are independent'
+    alt_hyp = 'There is a relationship between medalists and being male'
 
     # Making the observed dataframe
     observed = pd.crosstab(train.Sex_Male, train.medalist)
@@ -88,7 +88,7 @@ def barplot_medalist_male_stat(train):
         print(alt_hyp)
     else:
         print('We fail to reject the null hypothesis that', null_hyp)
-        print('There appears to be no relationship between churn and Contract Type')
+        print('There appears to be no relationship between medalists and males')
 
     print('P-Value', p)
     print('Chi2', round(chi2, 2))
