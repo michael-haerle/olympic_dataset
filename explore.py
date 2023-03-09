@@ -55,3 +55,16 @@ def barplot(train):
     sns.barplot(x='Team', y='medalist', data=groups, order=groups.sort_values('medalist').Team)
     plt.ylabel('Number of Medals')
     plt.title('Top 7 Teams')
+
+def barplot_medalist_male(train):
+    # Increasing the figure size and setting the title
+    plt.figure(figsize = (7, 7))
+    plt.title('')
+
+    # Plotting the bar plot
+    sns.barplot(x='Sex_Male', y='medalist', data=train)
+
+    # Setting the x and y labels, and setting the legend
+    plt.xlabel('Male')
+    plt.ylabel('Medalist')
+    plt.show()
