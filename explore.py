@@ -68,3 +68,27 @@ def barplot_medalist_male(train):
     plt.xlabel('Male')
     plt.ylabel('Medalist')
     plt.show()
+
+def barplot_medalist_male_stat(train):
+    # Setting the alpha
+    alpha = 0.05
+
+    # Setting the null and alternative hypothesis
+    null_hyp = 'Medalists and being Male are independent'
+    alt_hyp = 'There is a relationship between Medalists and being Male'
+
+    # Making the observed dataframe
+    observed = pd.crosstab(train.Sex_Male, train.medalist)
+
+    # Running the chi square test and running a if statement for the null hypothesis to be rejected or failed to reject
+    chi2, p, degf, expected = stats.chi2_contingency(observed)
+    if p < alpha:
+        print('We reject the null hypothesis that', null_hyp)
+        print(alt_hyp)
+    else:
+        print('We fail to reject the null hypothesis that', null_hyp)
+        print('There appears to be no relationship between churn and Contract Type')
+
+    print('P-Value', p)
+    print('Chi2', round(chi2, 2))
+    print('Degrees of Freedom', degf)
