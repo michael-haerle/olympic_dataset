@@ -1,5 +1,6 @@
 # Standard imports
 import pandas as pd
+from scipy import stats
 
 # Visulation Imports
 import matplotlib.pyplot as plt
