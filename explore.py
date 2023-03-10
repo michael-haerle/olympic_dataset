@@ -93,3 +93,12 @@ def barplot_medalist_male_stat(train):
     print('P-Value', p)
     print('Chi2', round(chi2, 2))
     print('Degrees of Freedom', degf)
+
+def barplot_average_age_by_medal(train):
+    plt.figure(figsize=(7, 7))
+    average_age_by_medal = train.groupby('Medal').mean().reset_index()
+    color = ['black','gold','goldenrod','grey']
+    sns.barplot(x='Medal', y='Age', data=average_age_by_medal, order=average_age_by_medal.sort_values('Age').Medal, palette=color)
+    plt.ylim(22)
+    plt.ylabel('Average Age')
+    plt.title('Average Age By Medal')
