@@ -88,34 +88,9 @@ ___
 ---
 | Attribute | Definition | Data Type |
 | ----- | ----- | ----- |
-| customer_id | Customers ID number| object |
-| senior_citizen | 1 = Customer is a Senior Citizen, 0 = Customer Not a Senior Citizen | int64 |
-| partner | 1 = Customer has a partner, 0 = Customer doesn't have a partner | int64 |
-| dependents | 1 = Customer has dependents, 0 = Customer doesn't have dependents | int64 |
-| tenure | Value of their tenure in months | int64 |
-| phone_service | 1 = Customer has phone service, 0 = Customer doesn't have phone service | int64 |
-| multiple_lines | Does the customer have multiple lines, yes/no/no phone service | object |
-| online_security | Does the customer have online security, yes/no/no internet service | object |
-| online_backup | Does the customer have online security, yes/no/no internet service | object |
-| device_protection | Does the customer have online backup, yes/no/no internet service | object |
-| tech_support | Does the customer have tech support, yes/no/no internet service | object |
-| streaming_tv | Does the customer have tv streaming, yes/no/no internet service | object |
-| streaming_movies | Does the customer have movie streaming, yes/no/no internet service | object |
-| paperless_billing | 1 = Customer has paperless billing, 0 = Customer doesn't have paperless billing | int64 |
-| monthly_charges | The amount of their monthly charge | float64 |
-| total_charges | The total charges for their account | float64 |
-| churn | 1 = Customer has churned, 0 = Customer hasn't churned | int64 |
-| contract_type | What contract does the customer have month-to-month/one year/two year | object |
-| internet_service_type | What internet service type does the customer have None/DSL/Fiber Optic | object |
-| gender_Male | 1 = Male, 0 = Female | uint8 |
-| contract_type_One_year | 1 = Customer has one year contract, 0 = Customer doesn't have one year contract | uint8 |
-| contract_type_Two_year | 1 = Customer has two year contract, 0 = Customer doesn't have two year contract | uint8 |
-| internet_service_type_Fiber_optic | 1 = Customer has fiber optic internet service, 0 = Customer doesn't have fiber optic internet service | uint8 |
-| internet_service_type_None | 1 = Customer has no internet service, 0 = Customer doesn't have no internet service | uint8 |
-| bel_avg_ten_abv_avg_mon_chrg | 1 = Customer is below average tenure and above average monthly charge,  0 = Customer isn't below average tenure and above average monthly charge| int64 |
-| baseline | The baseline prediction for churn, used for the modeling | int64 |
-| gender_Male_str | A string version of the gender_Male, this is used for a visual| object |
-| churn_str | A string version of churn, this is used for a visual | object|
+| ID | Athletes unique number| int64 |
+| Name | Athletes name | object |
+
 ***
 
 ## <a name="wrangle"></a>Data Acquisition and Preparation
