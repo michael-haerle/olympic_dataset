@@ -91,11 +91,11 @@ ___
 | ID | Athletes unique number| int64 |
 | Name | Athletes name | object |
 | Sex | Athletes gender M = Male, F = Female | object |
-| Age | Athletes | object |
-| Height | Athletes | object |
-| Weight | Athletes | object |
-| Team | Athletes | object |
-| NOC | Athletes | object |
+| Age | Athletes age | object |
+| Height | Athletes height in centimeters | object |
+| Weight | Athletes weight in kilograms | object |
+| Team | Athletes team name | object |
+| NOC | National Olympic Committee 3 letter code | object |
 | Games | Athletes | object |
 | Year | Athletes | object |
 | Season | Athletes | object |
