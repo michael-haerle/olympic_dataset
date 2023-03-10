@@ -90,6 +90,23 @@ ___
 | ----- | ----- | ----- |
 | ID | Athletes unique number| int64 |
 | Name | Athletes name | object |
+| Sex | Athletes name | object |
+| Age | Athletes name | object |
+| Height | Athletes name | object |
+| Weight | Athletes name | object |
+| Team | Athletes name | object |
+| NOC | Athletes name | object |
+| Games | Athletes name | object |
+| Year | Athletes name | object |
+| Season | Athletes name | object |
+| City | Athletes name | object |
+| Sport | Athletes name | object |
+| Event | Athletes name | object |
+| Medal | Athletes name | object |
+| Sex_Male | Athletes name | object |
+| medalist | Athletes name | object |
+| BMI | Athletes name | object |
+| AgeBins | Athletes name | object |
 
 ***
 
