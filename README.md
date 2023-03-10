@@ -96,17 +96,17 @@ ___
 | Weight | Athletes weight in kilograms | object |
 | Team | Athletes team name | object |
 | NOC | National Olympic Committee 3 letter code | object |
-| Games | Athletes | object |
-| Year | Athletes | object |
-| Season | Athletes | object |
-| City | Athletes | object |
-| Sport | Athletes | object |
-| Event | Athletes | object |
-| Medal | Athletes | object |
-| Sex_Male | Athletes | object |
-| medalist | Athletes | object |
-| BMI | Athletes | object |
-| AgeBins | Athletes | object |
+| Games | Year and season | object |
+| Year | Year the games took place | object |
+| Season | Summer or Winter games | object |
+| City | Host city | object |
+| Sport | Sport played | object |
+| Event | Specific event in the sport | object |
+| Medal | What medal the athlete received if any| object |
+| Sex_Male | 1 = Athlete is male, 0 = Athlete is female | object |
+| medalist | 1 = Athlete received a medal, 0 = Athlete received no medal | object |
+| BMI | Athletes Body Mass Index | object |
+| AgeBins | Athletes age binned by every 10 years | object |
 
 ***
 
