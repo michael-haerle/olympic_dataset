@@ -102,3 +102,8 @@ def barplot_average_age_by_medal(train):
     plt.ylim(22)
     plt.ylabel('Average Age')
     plt.title('Average Age By Medal')
+
+def athlete_most_medals(df):
+    groups = df.groupby('Name').sum()
+    groups[groups['medalist'] == groups['medalist'].max()]
+
