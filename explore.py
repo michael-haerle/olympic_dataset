@@ -107,3 +107,6 @@ def athlete_most_medals(df):
     groups = df.groupby('Name').sum()
     groups[groups['medalist'] == groups['medalist'].max()]
 
+def agebin_most_medals(df):
+    groups = df.groupby('AgeBins').sum()
+    groups[groups['medalist'] == groups['medalist'].max()]
