@@ -34,3 +34,15 @@ from sklearn.model_selection import cross_val_score
 import warnings
 warnings.filterwarnings("ignore")
 
+def data_split(train, validate, test):
+    X_cols = ['Sex_Male', 'Age', 'BMI']
+    X_train = train[X_cols]
+    y_train = train.medalist
+
+    X_validate = validate[X_cols]
+    y_validate = validate.medalist
+
+    X_test = test[X_cols]
+    y_test = test.medalist
+
+    return X_train, y_train, X_validate, y_validate, X_test, y_test
