@@ -46,3 +46,25 @@ def data_split(train, validate, test):
     y_test = test.medalist
 
     return X_train, y_train, X_validate, y_validate, X_test, y_test
+
+def decision_tree_train_top_2(X_train, y_train):
+    tree = DecisionTreeClassifier()
+    params = {'max_depth': range(1,16),
+            'max_features': [1, 2, 3, 4],
+            'min_samples_leaf': range(1,16),
+            'criterion': ['gini', 'entropy']}
+
+    grid = GridSearchCV(tree, params, cv=5)
+
+    grid.fit(X_train, y_train)
+
+    results = grid.cv_results_
+    test_scores = results['mean_test_score']
+    params = results['params']
+
+    for p, s in zip(params, test_scores):
+        p['score'] = s
+
+    dt_top_2 = pd.DataFrame(params).sort_values(by='score', ascending=False).head(2)
+
+    return dt_top_2
