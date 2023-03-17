@@ -68,3 +68,23 @@ def decision_tree_train_top_2(X_train, y_train):
     dt_top_2 = pd.DataFrame(params).sort_values(by='score', ascending=False).head(2)
 
     return dt_top_2
+
+def knn_train_top_2(X_train, y_train):
+    knn = KNeighborsClassifier()
+    params = {'n_neighbors': range(1,7),
+            'weights': ['uniform', 'distance'],
+            'leaf_size': range(1,20)}
+
+    grid = GridSearchCV(knn, params, cv=5)
+
+    grid.fit(X_train, y_train)
+
+    results = grid.cv_results_
+    test_scores = results['mean_test_score']
+    params = results['params']
+    for p, s in zip(params, test_scores):
+        p['score'] = s
+
+    knn_top_2 = pd.DataFrame(params).sort_values(by='score', ascending=False).head(2)
+
+    return knn_top_2
