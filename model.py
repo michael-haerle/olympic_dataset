@@ -88,3 +88,7 @@ def knn_train_top_2(X_train, y_train):
     knn_top_2 = pd.DataFrame(params).sort_values(by='score', ascending=False).head(2)
 
     return knn_top_2
+
+def baseline_acc(train):
+    train['baseline'] = 0
+    print('Baseline Accuracy', round(accuracy_score(train.medalist, train.baseline), 2)* 100,'%')
