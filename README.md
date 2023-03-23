@@ -229,7 +229,7 @@ ___
 
 ### Baseline
     
-- Baseline Results: Accuracy 73%
+- Baseline Results: Accuracy 86%
     
 
 - Selected features to input into models:
@@ -302,7 +302,7 @@ Model 3 results:
 
 | Model | Validation |
 | ---- | ----|
-| Baseline | 0.73 |
+| Baseline | 0.86 |
 | Random Forest | 0.80 |
 | K-Nearest Neighbor | 0.79 | 
 | Logistic Regression | 0.80 |
