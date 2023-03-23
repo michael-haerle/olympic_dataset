@@ -131,9 +131,8 @@ ___
 ## <a name="explore"></a>Data Exploration:
 [[Back to top](#top)]
 - Python files used for exploration:
-    - prepare.py 
-    - acquire.py
-    - modeling.py
+    - wrangle.py
+    - model.py
     - explore.py
 
 
