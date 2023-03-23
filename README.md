@@ -52,13 +52,13 @@ ___
 - medalist
 
 ### Initial questions:
+- What are the correlations in the data?
+- What athlete has the most medals?
+- What age bin has the most medals?
 - 
 
 ### Need to haves (Deliverables):
 - A final report notebook
-- A predictions csv
-- A 5min presentation
-
 
 ### Nice to haves (With more time):
  - 
