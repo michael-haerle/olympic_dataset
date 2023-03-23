@@ -55,7 +55,9 @@ ___
 - What are the correlations in the data?
 - What athlete has the most medals?
 - What age bin has the most medals?
-- 
+- Who are the top performing teams? What team has the most medals?
+- Is there a relationship between medalists and males?
+- Is there a significant difference in the average age for different medals?
 
 ### Need to haves (Deliverables):
 - A final report notebook
