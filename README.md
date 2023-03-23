@@ -34,24 +34,22 @@ ___
 
 ### Project Outline:
 - Create README.md with data dictionary, project and business goals, come up with questions to lead the exploration and the steps to reproduce.
-- Acquire data from the Codeup Database and create a function to automate this process. Save the function in an acquire.py file to import into the Final Report Notebook.
-- Clean and prepare data for exploration. Create a function to automate the process, store the function in a prepare.py module, and prepare data in Final Report Notebook by importing and using the funtion.
+- Acquire and prepare data for exploration from Kaggle and create a function to automate this process. Save the function in an wrangle.py file to import into the Final Report Notebook.
 - Produce at least 4 clean and easy to understand visuals.
 - Clearly define hypotheses, set an alpha, run the statistical tests needed, reject or fail to reject the Null Hypothesis, and document findings and takeaways.
 - Establish a baseline accuracy.
 - Train three different classification models.
 - Evaluate models on train and validate datasets.
 - Choose the model with that performs the best and evaluate that single model on the test dataset.
-- Create csv file with the customer id, the probability of churn, and the model's prediction for each observation in my test dataset.
 - Document conclusions, takeaways, and next steps in the Final Report Notebook.
 
 
 ### Project goals: 
-- 
+- To predict which athletes are going to medal in the olympics.
 
 
 ### Target variable:
-- 
+- medalist
 
 ### Initial questions:
 - 
