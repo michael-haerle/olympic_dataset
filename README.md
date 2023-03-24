@@ -276,9 +276,9 @@ Model 3 results:
 | Model | Validation |
 | ---- | ----|
 | Baseline | 0.86 |
-| Random Forest | 0.80 |
-| K-Nearest Neighbor | 0.79 | 
-| Logistic Regression | 0.80 |
+| Random Forest | 0.86 |
+| K-Nearest Neighbor | 0.86 | 
+| Naive Bayes | 0.86 |
 
 
 - {Random Forest} model performed the best
