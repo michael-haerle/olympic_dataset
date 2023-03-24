@@ -134,8 +134,7 @@ ___
 
 
 ### Takeaways from exploration:
-- The new column I made for people above the Avg Monthly Charge and Below the Avg Tenure seems to be a good column to use in the modeling phase.
-- Most of the numeric columns will be used for the modeling phase.
+- 
 
 ***
 
@@ -197,26 +196,6 @@ ___
 - Degrees of Freedom 1
 
 
-### Stats Test 3: Chi Square
-
-
-#### Hypothesis:
-- The null hypothesis (H<sub>0</sub>) is: People who are above the Avg Monthly Charge and Below the Avg Tenure are independent with churn
-- The alternate hypothesis (H<sub>1</sub>) is: There is a relationship between churn and people who are above the Avg Monthly Charge and Below the Avg Tenure
-
-#### Confidence level and alpha value:
-- I established a 95% confidence level
-- alpha = 1 - confidence, therefore alpha is 0.05
-
-
-#### Results:
-- We reject the null hypothesis that People who are above the Avg Monthly Charge and Below the Avg Tenure are independent with churn
-- There is a relationship between churn and people who are above the Avg Monthly Charge and Below the Avg Tenure
-- P-Value 5.788583939458989e-132
-- Chi2 597.52
-- Degrees of Freedom 1
-
-
 ***
 
 ## <a name="model"></a>Modeling:
@@ -228,18 +207,18 @@ ___
     
 
 - Selected features to input into models:
-    - features = ['bel_avg_ten_abv_avg_mon_chrg', 'internet_service_type_None', 'internet_service_type_Fiber_optic', 'contract_type_Two_year', 'contract_type_One_year', 'gender_Male', 'monthly_charges', 'paperless_billing', 'tenure', 'dependents', 'partner', 'senior_citizen']
+    - features = ['Sex_Male', 'Age', 'BMI']
 
 ***
 
 ## Models:
 
 
-### Model 1: Random Forest
+### Model 1: Decision Tree
 
 
 Model 1 results:
-- RandomForestClassifier min_samples_leaf=12, max_depth=8, random_state=123
+- Decision Tree max_depth=7, max_features=2, min_samples_leaf=4, criterion="entropy"
 - Model stats:
 - Accuracy: 0.81
 - True Positive Rate: 0.51
@@ -251,7 +230,7 @@ Model 1 results:
 - f1 score: 0.59
 - Positive support: 1121
 - Negative support: 3104
-- Accuracy of random forest classifier on training set: 0.81
+- Accuracy of Decision Tree classifier on training set: 0.81
 
 
 
@@ -259,36 +238,35 @@ Model 1 results:
 
 
 Model 2 results:
-- KNeighborsClassifier n_neighbors=15
+- KNeighborsClassifier leaf_size=2, n_neighbors=6, weights="uniform"
 - Model stats:
-- Accuracy: 0.81
-- True Positive Rate: 0.51
-- False Positive Rate: 0.08
-- True Negative Rate: 0.92
-- Flase Negative Rate: 0.49
-- Precision: 0.69
-- Recall: 0.51
-- f1 score: 0.58
-- Positive support: 1121
-- Negative support: 3104
-- Accuracy of KNN classifier on training set: 0.81
+- Accuracy: 0.86
+- True Positive Rate: 0.01
+- False Positive Rate: 0.01
+- True Negative Rate: 0.99
+- Flase Negative Rate: 0.99
+- Precision: 0.27
+- Recall: 0.01
+- f1 score: 0.02
+- Positive support: 14949
+- Negative support: 90465
+- Accuracy of KNN classifier on training set: 0.86
 
-### Model 3 : Logistic Regression
+### Model 3 : Naive Bayes
 
 Model 3 results:
-- LogisticRegression C=.01, random_state=123, intercept_scaling=1, solver=lbfgs
 - Model stats:
-- Accuracy: 0.80
-- True Positive Rate: 0.46
-- False Positive Rate: 0.09
-- True Negative Rate: 0.91
-- Flase Negative Rate: 0.54
-- Precision: 0.66
-- Recall: 0.46
-- f1 score: 0.55
-- Positive support: 1121
-- Negative support: 3104
-- Accuracy of Logistic Regression classifier on training set: 0.80
+- Accuracy: 0.86
+- True Positive Rate: 0.00
+- False Positive Rate: 0.00
+- True Negative Rate: 1.00
+- Flase Negative Rate: 1.00
+- Precision: 0.26
+- Recall: 0.00
+- f1 score: 0.00
+- Positive support: 14949
+- Negative support: 90465
+- Accuracy of Naive Bayes classifier on training set: 0.86
 
 
 ## Selecting the Best Model:
