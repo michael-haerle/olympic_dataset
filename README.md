@@ -220,17 +220,17 @@ ___
 Model 1 results:
 - Decision Tree max_depth=7, max_features=2, min_samples_leaf=4, criterion="entropy"
 - Model stats:
-- Accuracy: 0.81
-- True Positive Rate: 0.51
-- False Positive Rate: 0.08
-- True Negative Rate: 0.92
-- Flase Negative Rate: 0.49
-- Precision: 0.71
-- Recall: 0.51
-- f1 score: 0.59
-- Positive support: 1121
-- Negative support: 3104
-- Accuracy of Decision Tree classifier on training set: 0.81
+- Accuracy: 0.86
+- True Positive Rate: 0.00
+- False Positive Rate: 0.00
+- True Negative Rate: 1.00
+- Flase Negative Rate: 1.00
+- Precision: nan
+- Recall: 0.00
+- f1 score: nan
+- Positive support: 14949
+- Negative support: 90465
+- Accuracy of Decision Tree classifier on training set: 0.86
 
 
 
