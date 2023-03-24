@@ -67,7 +67,7 @@ ___
 
 
 ### Steps to Reproduce:
-- Then download the wrangle.py, model.py, explore.py, telcoCo.png, and final_report.ipynb
+- Then download the wrangle.py, model.py, explore.py, and final_report.ipynb
 - Make sure these are all in the same directory and run the final_report.ipynb.
 
 ***
@@ -116,17 +116,12 @@ ___
 
 
 ### Prepare steps: 
-- Droped duplicate columns
-- Created dummy variables
-- Concatenated the dummy dataframe
-- Changed the type for senior_citizen, tenure, and monthly_charges
-- Mapped the yes and no to 1 and 0 for columns partner, dependents, phone_service, paperless_billing, and churn
-- Dropped columns not needed
-- Changed the type of total_charges by replacing the white space with a 0
-- Set variables for the mean of tenure and monthly charges
-- Used those variables to feature engineer a new column where it returned a true if they were above the average monthly charge and below the average tenure
-- Mapped the true and false of that columns to 1 and 0
-- Split into the train, validate, and test sets
+- Featured engineered 4 new columns medalist, Sex_Male, BMI, and AgeBins.
+- Split the data into train, validate, and test.
+- Imputed age with the mean.
+- Dropped all data before the year 1960 as there is a large number of nulls.
+- Filled the nulls in the Medal column with the string 'None'.
+- Dropped the remaining nulls in the dataset.
 
 *********************
 
