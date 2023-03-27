@@ -109,6 +109,8 @@ def decision_tree_train(X_train, y_train):
     tree.fit(X_train, y_train)
     y_pred_train = tree.predict(X_train)
     cm = confusion_matrix(y_train, y_pred_train)
+    print('Decision Tree: max_depth=7, max_features=2, min_samples_leaf=4, criterion="entropy"')
+    print('-----------------------------------------')
     model_scores(cm)
 
 def knn_train_top_2(X_train, y_train):
