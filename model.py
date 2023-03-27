@@ -47,7 +47,59 @@ def data_split(train, validate, test):
 
     return X_train, y_train, X_validate, y_validate, X_test, y_test
 
-
+def model_scores(cm):
+    '''
+    Function to get all model scores necessary for codeup exercises
+    Accepts a confusion matrix, and prints a report with the following:
+        Accuracy
+        True positive rate
+        False positive rate
+        True negative rate
+        False negative rate 
+        Precision
+        Recall
+        f1-score
+        positive support
+        negative support
+    '''
+    
+    TN = cm[0,0]
+    FP = cm[0,1]
+    FN = cm[1,0]
+    TP = cm[1,1]
+    ALL = TP + FP + FN + TN
+    
+    print('Model stats:')
+   
+    # accuracy
+    acc = (TP + TN) / ALL
+    print('Accuracy: {:.2f}'.format(acc))
+    # true positive rate, also recall
+    TPR = recall = TP/ (TP + FN)
+    print('True Positive Rate: {:.2f}'.format(TPR))
+    # false positive rate
+    FPR = FP / (FP + TN)
+    print('False Positive Rate: {:.2f}'.format(FPR))
+    # true negative rate
+    TNR = TN / (TN + FP)
+    print('True Negative Rate: {:.2f}'.format(TNR))
+    # false negative rate
+    FNR = FN / (FN + TP)
+    print('Flase Negative Rate: {:.2f}'.format(FNR))
+    # precision
+    precision = TP / (TP + FP)
+    print('Precision: {:.2f}'.format(precision))
+    # recall
+    print('Recall: {:.2f}'.format(recall))
+    # f1
+    f1_score = 2 * (precision*recall) / (precision+recall)
+    print('f1 score: {:.2f}'.format(f1_score))
+    # support
+    support_pos = TP + FN
+    print('Positive support:',support_pos)
+    support_neg = FP + TN
+    print('Negative support:',support_neg)
+    print('-----------------------------------------')
 
 def decision_tree_train(X_train, y_train):
     tree = DecisionTreeClassifier(max_depth=7, max_features=2, min_samples_leaf=4, criterion="entropy")
