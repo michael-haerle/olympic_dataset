@@ -29,6 +29,9 @@ from sklearn.tree import DecisionTreeClassifier
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.model_selection import GridSearchCV
 from sklearn.model_selection import cross_val_score
+from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.naive_bayes import GaussianNB
 
 # turn off pink boxes
 import warnings
