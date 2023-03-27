@@ -111,8 +111,6 @@ def decision_tree_train(X_train, y_train):
     cm = confusion_matrix(y_train, y_pred_train)
     model_scores(cm)
 
-    return dt_top_2
-
 def knn_train_top_2(X_train, y_train):
     knn = KNeighborsClassifier()
     params = {'n_neighbors': range(1,7),
