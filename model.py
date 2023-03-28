@@ -113,25 +113,14 @@ def decision_tree_train(X_train, y_train):
     print('-----------------------------------------')
     model_scores(cm)
 
-def knn_train_top_2(X_train, y_train):
-    knn = KNeighborsClassifier()
-    params = {'n_neighbors': range(1,7),
-            'weights': ['uniform', 'distance'],
-            'leaf_size': range(1,20)}
-
-    grid = GridSearchCV(knn, params, cv=5)
-
-    grid.fit(X_train, y_train)
-
-    results = grid.cv_results_
-    test_scores = results['mean_test_score']
-    params = results['params']
-    for p, s in zip(params, test_scores):
-        p['score'] = s
-
-    knn_top_2 = pd.DataFrame(params).sort_values(by='score', ascending=False).head(2)
-
-    return knn_top_2
+def knn_train(X_train, y_train):
+    knn = KNeighborsClassifier(leaf_size=2, n_neighbors=6, weights="uniform")
+    knn.fit(X_train, y_train)
+    y_pred_train = knn.predict(X_train)
+    cm = confusion_matrix(y_train, y_pred_train)
+    print('KNN: leaf_size=2, n_neighbors=6, weights="uniform"')
+    print('-----------------------------------------')
+    model_scores(cm)
 
 def baseline_acc(train):
     train['baseline'] = 0
