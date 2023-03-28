@@ -122,6 +122,15 @@ def knn_train(X_train, y_train):
     print('-----------------------------------------')
     model_scores(cm)
 
+def naive_bayes_train(X_train, y_train):
+    gnb = GaussianNB()
+    gnb.fit(X_train, y_train)
+    y_pred_train = gnb.predict(X_train)
+    cm = confusion_matrix(y_train, y_pred_train)
+    print('Naive Bayes')
+    print('-----------------------------------------')
+    model_scores(cm)
+
 def baseline_acc(train):
     train['baseline'] = 0
     print('Baseline Accuracy', round(accuracy_score(train.medalist, train.baseline), 2)* 100,'%')
