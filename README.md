@@ -63,7 +63,8 @@ ___
 - A final report notebook
 
 ### Nice to haves (With more time):
- - 
+ - Webscraping/acquiring more information.
+ - Testing more models.
 
 
 ### Steps to Reproduce:
