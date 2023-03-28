@@ -277,12 +277,12 @@ Model 3 results:
 | Model | Validation |
 | ---- | ----|
 | Baseline | 0.86 |
-| Random Forest | 0.86 |
+| Decision Tree | 0.86 |
 | K-Nearest Neighbor | 0.86 | 
 | Naive Bayes | 0.86 |
 
 
-- {Random Forest} model performed the best
+- {K-Nearest Neighbor} model performed the best.
 
 
 ## Testing the Model
@@ -293,11 +293,7 @@ Model 3 results:
 
 ## <a name="conclusion"></a>Conclusion:
 
-- There are positive correlations with churn and monthly charges, papperless billing, fiber optic, phone service, senior citizen, and those who are above the average monthly charges and below the average tenure.
-- There are negative correlations with churn and tenure, total charges, no internet service, and a two year contract.
-- There is a relationship between churn and contract type.
-- There was not a relationship between both genders who churn and phone service, however there was a relationship between females who churn and phone service.
-- There was a relationship between churn and people who are above the average monthly charge and below the average tenure.
+- 
 
 #### Idealy we would like to find a way to incentivise more people to sign a one or two year contract as opposed to a month-to-month contract. It would also be benificial to get more people to stay past the average tenure and keep their cost at or below the average monthly charge. 
 
