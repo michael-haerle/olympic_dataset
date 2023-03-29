@@ -107,33 +107,6 @@ def model_scores(cm):
     print('Negative support:',support_neg)
     print('-----------------------------------------')
 
-def decision_tree_train(X_train, y_train):
-    tree = DecisionTreeClassifier(max_depth=7, max_features=2, min_samples_leaf=4, criterion="entropy")
-    tree.fit(X_train, y_train)
-    y_pred_train = tree.predict(X_train)
-    cm = confusion_matrix(y_train, y_pred_train)
-    print('Decision Tree: max_depth=7, max_features=2, min_samples_leaf=4, criterion="entropy"')
-    print('-----------------------------------------')
-    model_scores(cm)
-
-def knn_train(X_train, y_train):
-    knn = KNeighborsClassifier(leaf_size=2, n_neighbors=6, weights="uniform")
-    knn.fit(X_train, y_train)
-    y_pred_train = knn.predict(X_train)
-    cm = confusion_matrix(y_train, y_pred_train)
-    print('KNN: leaf_size=2, n_neighbors=6, weights="uniform"')
-    print('-----------------------------------------')
-    model_scores(cm)
-
-def naive_bayes_train(X_train, y_train):
-    gnb = GaussianNB()
-    gnb.fit(X_train, y_train)
-    y_pred_train = gnb.predict(X_train)
-    cm = confusion_matrix(y_train, y_pred_train)
-    print('Naive Bayes')
-    print('-----------------------------------------')
-    model_scores(cm)
-
 def top_3_models(X_train, y_train):
     tree = DecisionTreeClassifier(max_depth=7, max_features=2, min_samples_leaf=4, criterion="entropy")
     tree.fit(X_train, y_train)
