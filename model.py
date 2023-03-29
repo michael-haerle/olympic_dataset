@@ -37,7 +37,7 @@ from sklearn.naive_bayes import GaussianNB
 import warnings
 warnings.filterwarnings("ignore")
 
-def data_split(train, validate, test):
+def data_split_and_baseline_acc(train, validate, test):
     X_cols = ['Sex_Male', 'Age', 'BMI']
     X_train = train[X_cols]
     y_train = train.medalist
@@ -47,6 +47,9 @@ def data_split(train, validate, test):
 
     X_test = test[X_cols]
     y_test = test.medalist
+
+    train['baseline'] = 0
+    print('Baseline Accuracy', round(accuracy_score(train.medalist, train.baseline), 2)* 100,'%')
 
     return X_train, y_train, X_validate, y_validate, X_test, y_test
 
@@ -130,7 +133,3 @@ def naive_bayes_train(X_train, y_train):
     print('Naive Bayes')
     print('-----------------------------------------')
     model_scores(cm)
-
-def baseline_acc(train):
-    train['baseline'] = 0
-    print('Baseline Accuracy', round(accuracy_score(train.medalist, train.baseline), 2)* 100,'%')
