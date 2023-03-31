@@ -100,11 +100,6 @@ def model_scores(cm):
     # f1
     f1_score = 2 * (precision*recall) / (precision+recall)
     print('f1 score: {:.2f}'.format(f1_score))
-    # support
-    support_pos = TP + FN
-    print('Positive support:',support_pos)
-    support_neg = FP + TN
-    print('Negative support:',support_neg)
     print('-----------------------------------------')
 
 def top_3_models(X_train, y_train):
