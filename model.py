@@ -103,6 +103,11 @@ def model_scores(cm):
     print('-----------------------------------------')
 
 def top_3_models(X_train, y_train):
+    '''
+    This function takes in a X_train and y_train and outputs the top 3
+    models found for this data set found in my initial notebook. This function uses
+    the model_scores function to print the models results.
+    '''
     tree = DecisionTreeClassifier(max_depth=7, max_features=2, min_samples_leaf=4, criterion="entropy")
     tree.fit(X_train, y_train)
     y_pred_train = tree.predict(X_train)
