@@ -152,3 +152,13 @@ def top_3_models_validate(X_validate, y_validate):
     print('Naive Bayes (Validate Set):')
     print('-----------------------------------------')
     model_scores(cm)
+
+def knn_test(X_test, y_test):
+    knn = KNeighborsClassifier(leaf_size=2, n_neighbors=6, weights="uniform")
+    knn.fit(X_test, y_test)
+    y_pred_test = knn.predict(X_test)
+    cm = confusion_matrix(y_test, y_pred_test)
+    print('-----------------------------------------')
+    print('KNN (Test Set): \nleaf_size=2, n_neighbors=6, weights="uniform"')
+    print('-----------------------------------------')
+    model_scores(cm)
