@@ -76,7 +76,11 @@ This projects goal is to predict what athlets will medal in the olympics using a
 ## <a name="findings"></a>Key Findings:
 [[Back to top](#top)]
 
-- 
+- There are no negative correlation in this dataset.
+- The 20s AgeBin has the most medals.
+- Athletes with no medals have the lowest average age.
+- There is no significant difference in the average age for different medals.
+- The United Stats has more then double the medals of any other team except the Soviet Union.
 
 
 ***
