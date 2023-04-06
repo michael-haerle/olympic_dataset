@@ -161,42 +161,6 @@ This projects goal is to predict what athlets will medal in the olympics using a
 - Degrees of Freedom 2
 
 
-### Stats Test 2: Chi Square
-
-
-#### Hypothesis(First Plot):
-- The null hypothesis (H<sub>0</sub>) is: Phone Service and churn are independent
-- The alternate hypothesis (H<sub>1</sub>) is: There is a relationship between churn and Phone Service
-
-#### Confidence level and alpha value(First Plot):
-- I established a 95% confidence level
-- alpha = 1 - confidence, therefore alpha is 0.05
-
-
-#### Results(First Plot):
-- We fail to reject the null hypothesis that Phone Service and churn are independent
-- There appears to be no relationship between churn and Phone Service
-- P-Value 0.11104986402814591
-- Chi2 2.54
-- Degrees of Freedom 1
-
-#### Hypothesis(Second Plot):
-- The null hypothesis (H<sub>0</sub>) is: Females who have Phone Service and churn are independent
-- The alternate hypothesis (H<sub>1</sub>) is: There is a relationship between churn and Females with Phone Service
-
-#### Confidence level and alpha value(Second Plot):
-- I established a 95% confidence level
-- alpha = 1 - confidence, therefore alpha is 0.05
-
-
-#### Results(Second Plot):
-- We reject the null hypothesis that Females who have Phone Service and churn are independent
-- There is a relationship between churn and Females with Phone Service
-- P-Value 0.0298505787547087
-- Chi2 4.72
-- Degrees of Freedom 1
-
-
 ***
 
 ## <a name="model"></a>Modeling:
