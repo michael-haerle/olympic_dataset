@@ -24,7 +24,7 @@ ___
 
 
 ## <a name="project_description"></a>Project Description:
-
+This projects goal is to predict what athlets will medal in the olympics using a classification model. 
 
 [[Back to top](#top)]
 
