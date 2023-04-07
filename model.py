@@ -176,3 +176,17 @@ def dt_train_validate(X_train, y_train, X_validate, y_validate):
     print('Decision Tree (Validate Set):')
     print('-----------------------------------------')
     model_scores(cm)
+
+def knn_train_validate(X_train, y_train, X_validate, y_validate):
+    knn = KNeighborsClassifier(leaf_size=2, n_neighbors=6, weights="uniform")
+    knn.fit(X_train, y_train)
+    y_pred_train = knn.predict(X_train)
+    cm = confusion_matrix(y_train, y_pred_train)
+    print('KNN (Training Set): \nleaf_size=2, n_neighbors=6, weights="uniform"')
+    print('-----------------------------------------')
+    model_scores(cm)
+    y_pred_validate = knn.predict(X_validate)
+    cm = confusion_matrix(y_validate, y_pred_validate)
+    print('KNN (Validate Set):')
+    print('-----------------------------------------')
+    model_scores(cm)
