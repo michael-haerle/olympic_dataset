@@ -190,3 +190,17 @@ def knn_train_validate(X_train, y_train, X_validate, y_validate):
     print('KNN (Validate Set):')
     print('-----------------------------------------')
     model_scores(cm)
+
+def naive_bayes_train_validate(X_train, y_train, X_validate, y_validate):
+    gnb = GaussianNB()
+    gnb.fit(X_train, y_train)
+    y_pred_train = gnb.predict(X_train)
+    cm = confusion_matrix(y_train, y_pred_train)
+    print('Naive Bayes (Training Set):')
+    print('-----------------------------------------')
+    model_scores(cm)
+    y_pred_validate = gnb.predict(X_validate)
+    cm = confusion_matrix(y_validate, y_pred_validate)
+    print('Naive Bayes (Validate Set):')
+    print('-----------------------------------------')
+    model_scores(cm)
