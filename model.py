@@ -173,6 +173,6 @@ def dt_train_validate(X_train, y_train, X_validate, y_validate):
     model_scores(cm)
     y_pred_validate = tree.predict(X_validate)
     cm = confusion_matrix(y_validate, y_pred_validate)
-    print('Decision Tree (Validate Set): \nmax_depth=7, max_features=2, min_samples_leaf=4, criterion="entropy"')
+    print('Decision Tree (Validate Set):')
     print('-----------------------------------------')
     model_scores(cm)
